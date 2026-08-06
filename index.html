@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Clonex &middot; Grave o seu trabalho e receba por hora</title>
-<meta name="description" content="A Clonex empresta um kit de gravação sem custo. Você grava as tarefas que já faz no seu dia. R$ 1.500 por 100 horas gravadas no mês.">
+<meta name="description" content="A Clonex empresta o equipamento de gravação sem custo. Você grava as tarefas que já faz no seu dia e recebe até R$ 15 por hora gravada.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -138,6 +138,19 @@ section.tight{padding:52px 0}
 .money .side p+p{margin-top:12px}
 .money .lbl{color:rgba(255,255,255,.72);font-size:15px;margin-top:12px;max-width:280px}
 .money .left{position:relative;z-index:2}
+
+/* ---------- faixas de pagamento ---------- */
+.tiers{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.tier{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:26px 28px}
+.tier .tag{font-size:12.2px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);margin-bottom:7px}
+.tier h4{font-size:19px;letter-spacing:-.025em}
+.tier .sub{font-size:14.2px;color:var(--muted);margin-top:5px;line-height:1.45}
+.tier .rows{margin-top:18px;border-top:1px solid var(--line2)}
+.tier .row{display:flex;align-items:baseline;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid var(--line2)}
+.tier .row .h{font-size:14.8px;color:var(--muted)}
+.tier .row .v{font-size:19px;font-weight:600;letter-spacing:-.03em;white-space:nowrap}
+.tier .row.top .v{color:var(--accent)}
+@media(max-width:820px){.tiers{grid-template-columns:1fr}.tier{padding:22px}}
 
 /* ---------- lista de atividades ---------- */
 .acts{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
@@ -354,8 +367,8 @@ footer{border-top:1px solid var(--line);padding:40px 0 54px;margin-top:20px}
 <div class="hero"><div class="glow"></div><div class="wrap"><div class="hero-in">
   <div class="eyebrow">Projeto Clonex &middot; captura de dados no Brasil</div>
   <h1>Seu trabalho de todo dia pode virar renda.</h1>
-  <p class="lead">A Clonex empresta um kit de gravação, sem custo nenhum. Você grava as tarefas que já faz no seu dia.
-  São <strong>R$ 1.500 por 100 horas</strong> gravadas no mês.</p>
+  <p class="lead">A Clonex empresta o equipamento de gravação, sem custo nenhum. Você grava as tarefas que já faz no seu dia.
+  São <strong>até R$ 15 por hora</strong> gravada.</p>
   <div class="pills"><span class="pill accent"><span class="k"></span>Equipamento por nossa conta</span><span class="pill"><span class="k"></span>Pagamento no Pix</span><span class="pill"><span class="k"></span>Sem vínculo de emprego</span><span class="pill"><span class="k"></span>Pode parar quando quiser</span></div>
   <div class="btn-row"><a class="btn" href="https://wa.me/5532999403399" target="_blank" rel="noopener">Falar no WhatsApp <span>&rarr;</span></a><a class="btn ghost" href="#como">Ver como funciona</a></div>
   <p class="tiny" style="margin-top:22px">Empresa brasileira &middot; @clonex.labs, 99,4 mil seguidores &middot; projeto rodando em Pernambuco, Minas, São Paulo e Rio de Janeiro</p>
@@ -383,15 +396,38 @@ footer{border-top:1px solid var(--line);padding:40px 0 54px;margin-top:20px}
 
 <section class="tight"><div class="wrap">
   <div class="money">
-  <div class="left"><div class="big">R$ 1.500</div><div class="lbl">por 100 horas gravadas no mês, com um kit de equipamento</div></div>
-  <div class="side"><p>Isso dá R$ 15 por hora entregue. São 100 horas no mês, distribuídas do jeito que couber na sua rotina.</p><p>Entregando mais que 100 horas, você recebe proporcionalmente pelas horas a mais.</p></div>
+  <div class="left"><div class="big">até R$ 15</div><div class="lbl">por hora gravada. Quanto mais horas no mês, maior o valor da hora.</div></div>
+  <div class="side"><p>Você distribui as horas do jeito que couber na sua rotina. No fechamento do mês, o total de horas válidas define o valor da hora.</p><p>Quem já tem celular para gravar entra com o próprio aparelho e começa numa faixa mais alta. Quem não tem, recebe o celular da Clonex junto com o resto do equipamento.</p></div>
 </div>
+  <div class="tiers">
+    <div class="tier">
+      <div class="tag">Você usa o seu celular</div>
+      <h4>Freelancer</h4>
+      <div class="sub">Você grava com o seu próprio aparelho. A Clonex empresta o capacete e o adaptador.</div>
+      <div class="rows">
+        <div class="row"><span class="h">Até 29 horas no mês</span><span class="v">R$ 12/h</span></div>
+        <div class="row top"><span class="h">30 horas ou mais</span><span class="v">R$ 15/h</span></div>
+      </div>
+    </div>
+    <div class="tier">
+      <div class="tag">A Clonex manda o celular</div>
+      <h4>Fixo</h4>
+      <div class="sub">Kit completo por nossa conta: capacete, adaptador e celular.</div>
+      <div class="rows">
+        <div class="row"><span class="h">Até 49 horas no mês</span><span class="v">R$ 10/h</span></div>
+        <div class="row"><span class="h">De 50 a 70 horas</span><span class="v">R$ 12/h</span></div>
+        <div class="row top"><span class="h">Acima de 70 horas</span><span class="v">R$ 15/h</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="note" style="margin-top:12px">A faixa alcançada no fechamento do mês vale para todas as horas válidas daquele mês. Exemplo: 60 horas no modelo fixo são 60 &times; R$ 12, ou seja, R$ 720.</div>
+
   <div class="grid g3" style="margin-top:14px"><div class="card white"><div class="chip">&#8226;</div><h4>Primeiro pagamento em 10 horas</h4><p>Assim que você completar as 10 primeiras horas, o dinheiro cai. Antes mesmo de fechar o mês.</p></div><div class="card white"><div class="chip">&#8226;</div><h4>O restante no fechamento</h4><p>No fim do mês, com até 7 dias para conferir as horas gravadas e fechar o valor certo.</p></div><div class="card white"><div class="chip">&#8226;</div><h4>Pix, sem burocracia</h4><p>Pessoa física recebe direto no Pix, sem precisar de CNPJ. Quem tem empresa pode emitir nota.</p></div></div>
 </div></section>
 
 <section id="como" class="tight"><div class="wrap">
   <div class="sec-head"><div class="eyebrow">Passo a passo</div><h2>Como funciona, do começo ao pagamento</h2></div>
-  <div class="steps"><div class="step"><div class="n">1</div><h4>Você fala com o líder da sua região</h4><p>Uma conversa no WhatsApp para entender o seu trabalho e ver se encaixa no projeto.</p></div><div class="step"><div class="n">2</div><h4>A Clonex entrega o kit</h4><p>Capacete com suporte, adaptador e celular. Tudo por nossa conta, sem depósito e sem desconto.</p></div><div class="step"><div class="n">3</div><h4>Treinamento rápido e primeira gravação</h4><p>O líder mostra como ligar, como posicionar e o que pode e o que não pode. Depois acompanha a sua primeira gravação.</p></div><div class="step"><div class="n">4</div><h4>Você grava o seu dia normal</h4><p>Sem mudar o que você já faz. A câmera fica ligada durante a tarefa e você desliga quando terminar.</p></div><div class="step"><div class="n">5</div><h4>Envia, a gente confere e paga</h4><p>As primeiras 10 horas caem assim que você completar. O restante no fechamento do mês.</p></div></div>
+  <div class="steps"><div class="step"><div class="n">1</div><h4>Você fala com o líder da sua região</h4><p>Uma conversa no WhatsApp para entender o seu trabalho e ver se encaixa no projeto.</p></div><div class="step"><div class="n">2</div><h4>A Clonex entrega o equipamento</h4><p>Capacete com suporte e adaptador, por nossa conta, sem depósito e sem desconto. Se você não tiver celular para gravar, o aparelho também vai junto.</p></div><div class="step"><div class="n">3</div><h4>Treinamento rápido e primeira gravação</h4><p>O líder mostra como ligar, como posicionar e o que pode e o que não pode. Depois acompanha a sua primeira gravação.</p></div><div class="step"><div class="n">4</div><h4>Você grava o seu dia normal</h4><p>Sem mudar o que você já faz. A câmera fica ligada durante a tarefa e você desliga quando terminar.</p></div><div class="step"><div class="n">5</div><h4>Envia, a gente confere e paga</h4><p>As primeiras 10 horas caem assim que você completar. O restante no fechamento do mês.</p></div></div>
 </div></section>
 
 <section><div class="wrap">
@@ -400,13 +436,13 @@ footer{border-top:1px solid var(--line);padding:40px 0 54px;margin-top:20px}
     <a class="path" href="#/autonomo">
       <h3>Trabalho por conta própria</h3>
       <div class="who">Jardineiro, confeiteira, mecânico, pedreiro, costureira, diarista, eletricista.</div>
-      <p>Você grava o seu próprio serviço. Um kit, R$ 1.500 por 100 horas no mês.</p>
+      <p>Você grava o seu próprio serviço e recebe até R$ 15 por hora gravada.</p>
       <span class="go">Ver a página &rarr;</span>
     </a>
     <a class="path" href="#/negocio">
       <h3>Tenho um negócio com equipe</h3>
       <div class="who">Petshop, padaria, oficina, restaurante, mercearia, lavanderia, sítio.</div>
-      <p>Até 10 kits na mesma unidade. Receita em cima do trabalho que a equipe já faz.</p>
+      <p>Até 10 participantes na mesma unidade. Receita em cima do trabalho que a equipe já faz.</p>
       <span class="go">Ver a página &rarr;</span>
     </a>
     <a class="path" href="#/industria">
@@ -435,7 +471,7 @@ footer{border-top:1px solid var(--line);padding:40px 0 54px;margin-top:20px}
 
 <section class="tight"><div class="wrap">
   <div class="sec-head"><div class="eyebrow">Equipamento</div><h2>O que vem no kit</h2></div>
-  <div class="grid g3"><div class="card"><div class="chip">&#9679;</div><h4>Capacete com suporte</h4><p>Leve, ajustável, para você trabalhar normalmente com as duas mãos livres.</p></div><div class="card"><div class="chip">&#9679;</div><h4>Adaptador de celular</h4><p>Prende o aparelho na posição certa, sempre no mesmo ângulo.</p></div><div class="card"><div class="chip">&#9679;</div><h4>Celular</h4><p>O aparelho vai junto no kit. Você não usa o seu.</p></div></div><div style="margin-top:14px" class="note">O kit é da Clonex. Fica emprestado durante o projeto e volta no encerramento. Você não paga nada, não deixa depósito e não tem desconto no pagamento. A internet só é usada na hora de enviar as gravações, não durante o trabalho.</div>
+  <div class="grid g3"><div class="card"><div class="chip">&#9679;</div><h4>Capacete com suporte</h4><p>Leve, ajustável, para você trabalhar normalmente com as duas mãos livres.</p></div><div class="card"><div class="chip">&#9679;</div><h4>Adaptador de celular</h4><p>Prende o aparelho na posição certa, sempre no mesmo ângulo.</p></div><div class="card"><div class="chip">&#9679;</div><h4>Celular</h4><p>Se você não tiver um aparelho para gravar, o celular vai junto por nossa conta. Se preferir usar o seu, a faixa de pagamento é mais alta.</p></div></div><div style="margin-top:14px" class="note">O kit é da Clonex. Fica emprestado durante o projeto e volta no encerramento. Você não paga nada, não deixa depósito e não tem desconto no pagamento. A internet só é usada na hora de enviar as gravações, não durante o trabalho.</div>
 </div></section>
 
 <section class="tight"><div class="wrap">
@@ -460,7 +496,7 @@ footer{border-top:1px solid var(--line);padding:40px 0 54px;margin-top:20px}
 
 <section id="faq" class="tight"><div class="wrap">
   <div class="sec-head"><div class="eyebrow">Dúvidas</div><h2>Perguntas que todo mundo faz</h2></div>
-  <div class="faq"><details><summary>Preciso mesmo gravar 5 horas por dia, 20 dias por mês?</summary><p>Não. A meta é 100 horas gravadas no mês. As 5 horas por dia em 20 dias são só uma estimativa, para você ter uma ideia do tamanho. Pode gravar mais horas em menos dias ou menos horas em mais dias, do jeito que couber na sua rotina. O pagamento acompanha as horas produzidas: entregando mais que 100 horas, você recebe proporcionalmente pelas horas a mais.</p></details><details><summary>Preciso ter CNPJ?</summary><p>Não. Dá para participar como pessoa física, com pagamento no Pix. Se você tem CNPJ e prefere emitir nota, também funciona.</p></details><details><summary>Vou ter vínculo de emprego com a Clonex?</summary><p>Não. Não é contratação, não é CLT e não gera vínculo. É uma parceria de projeto, com contrato assinado dos dois lados.</p></details><details><summary>Quem paga o celular e a internet?</summary><p>O celular é da Clonex e vai junto no kit, sem custo para você. A internet você só usa na hora de enviar as gravações, não durante o trabalho.</p></details><details><summary>E se eu não conseguir fechar as 100 horas?</summary><p>A gente acompanha o seu ritmo. Se você gravou de forma constante e ainda assim não bateu a meta, recebe proporcionalmente às horas entregues, sem desconto nenhum. Se a produção ficar muito abaixo do combinado, pagamos o que foi produzido e o kit é remanejado para outra pessoa.</p></details><details><summary>Quando eu recebo?</summary><p>As primeiras 10 horas são pagas assim que você completar, para você ver que o pagamento é real. O restante entra no fechamento do mês, em até 7 dias para conferir as horas e fechar o valor.</p></details><details><summary>Meus clientes vão aparecer?</summary><p>A regra padrão é o cliente ficar fora da cena. Em serviços feitos na pessoa, como barbearia, salão ou petshop, quem é atendido assina a autorização antes. Sem assinatura, não grava.</p></details><details><summary>O equipamento fica comigo?</summary><p>Não. O kit é da Clonex, fica emprestado durante o projeto e volta no encerramento.</p></details><details><summary>Posso parar quando quiser?</summary><p>Pode. Pagamos proporcionalmente ao que já foi gravado e recolhemos o kit.</p></details><details><summary>Quanto tempo dura o projeto?</summary><p>O combinado é mês a mês. O primeiro mês é o piloto e, com bom resultado, já existe extensão prevista de 3 meses, com possibilidade de continuar depois disso.</p></details><details><summary>Quantas pessoas podem participar no mesmo local?</summary><p>Hoje o limite é de 10 kits por unidade. Conforme o resultado mensal, esse número pode subir.</p></details></div>
+  <div class="faq"><details><summary>Existe um número mínimo de horas por dia?</summary><p>Não. Você grava mais horas em menos dias ou menos horas em mais dias, do jeito que couber na sua rotina. O que conta é o total de horas válidas no fim do mês, porque é ele que define o valor da hora.</p></details><details><summary>Preciso ter CNPJ?</summary><p>Não. Dá para participar como pessoa física, com pagamento no Pix. Se você tem CNPJ e prefere emitir nota, também funciona.</p></details><details><summary>Vou ter vínculo de emprego com a Clonex?</summary><p>Não. Não é contratação, não é CLT e não gera vínculo. É uma parceria de projeto, com contrato assinado dos dois lados.</p></details><details><summary>Quem paga o celular e a internet?</summary><p>Se você não tiver um aparelho para gravar, o celular é da Clonex e vai junto, sem custo para você. Se preferir usar o seu, a faixa de pagamento é mais alta. A internet você só usa na hora de enviar as gravações, não durante o trabalho.</p></details><details><summary>Como é calculado o valor da hora?</summary><p>Pelo total de horas válidas que você entregar no mês, e a faixa alcançada vale para todas as horas daquele mês. Usando o seu próprio celular: até 29 horas, R$ 12 por hora; 30 horas ou mais, R$ 15 por hora. Com o celular da Clonex: até 49 horas, R$ 10 por hora; de 50 a 70 horas, R$ 12 por hora; acima de 70 horas, R$ 15 por hora. Não existe desconto nem multa por gravar pouco. Se a produção ficar muito abaixo do combinado, pagamos o que foi produzido e o equipamento é remanejado.</p></details><details><summary>Quando eu recebo?</summary><p>As primeiras 10 horas são pagas assim que você completar, para você ver que o pagamento é real. O restante entra no fechamento do mês, em até 7 dias para conferir as horas e fechar o valor.</p></details><details><summary>Meus clientes vão aparecer?</summary><p>A regra padrão é o cliente ficar fora da cena. Em serviços feitos na pessoa, como barbearia, salão ou petshop, quem é atendido assina a autorização antes. Sem assinatura, não grava.</p></details><details><summary>O equipamento fica comigo?</summary><p>Não. O capacete, o adaptador e, quando fornecido, o celular são da Clonex. Ficam emprestados durante o projeto e voltam no encerramento.</p></details><details><summary>Posso parar quando quiser?</summary><p>Pode. Pagamos as horas já gravadas, na faixa correspondente, e recolhemos o equipamento.</p></details><details><summary>Quanto tempo dura o projeto?</summary><p>O combinado é mês a mês. O primeiro mês é o piloto e, com bom resultado, já existe extensão prevista de 3 meses, com possibilidade de continuar depois disso.</p></details><details><summary>Quantas pessoas podem participar no mesmo local?</summary><p>Hoje o limite é de 10 participantes por unidade. Conforme o resultado mensal, esse número pode subir.</p></details></div>
 </div></section>
 
 <section class="tight"><div class="wrap">
@@ -476,7 +512,7 @@ footer{border-top:1px solid var(--line);padding:40px 0 54px;margin-top:20px}
   <h1>Você já faz o serviço. Agora ele também pode te pagar.</h1>
   <p class="lead">Jardineiro, confeiteira, mecânico, pedreiro, costureira, diarista, eletricista.
   Se você trabalha com as mãos, este projeto é para você.</p>
-  <div class="pills"><span class="pill accent"><span class="k"></span>R$ 1.500 por 100 horas no mês</span><span class="pill"><span class="k"></span>Equipamento por nossa conta</span><span class="pill"><span class="k"></span>Pix, sem precisar de CNPJ</span><span class="pill"><span class="k"></span>Sem vínculo de emprego</span></div>
+  <div class="pills"><span class="pill accent"><span class="k"></span>Até R$ 15 por hora gravada</span><span class="pill"><span class="k"></span>Equipamento por nossa conta</span><span class="pill"><span class="k"></span>Pix, sem precisar de CNPJ</span><span class="pill"><span class="k"></span>Sem vínculo de emprego</span></div>
   <div class="btn-row"><a class="btn" href="https://wa.me/5532999403399" target="_blank" rel="noopener">Falar no WhatsApp <span>&rarr;</span></a><a class="btn ghost" href="#como">Ver como funciona</a></div>
 </div></div></div>
 
@@ -502,38 +538,61 @@ footer{border-top:1px solid var(--line);padding:40px 0 54px;margin-top:20px}
 
 <section class="tight"><div class="wrap">
   <div class="money">
-  <div class="left"><div class="big">R$ 1.500</div><div class="lbl">por 100 horas gravadas no mês</div></div>
-  <div class="side"><p>Isso dá R$ 15 por hora entregue. São 100 horas no mês, distribuídas do jeito que couber na sua rotina.</p><p>Entregando mais que 100 horas, você recebe proporcionalmente pelas horas a mais.</p></div>
+  <div class="left"><div class="big">até R$ 15</div><div class="lbl">por hora gravada. Quanto mais horas no mês, maior o valor da hora.</div></div>
+  <div class="side"><p>Você distribui as horas do jeito que couber na sua rotina. No fechamento do mês, o total de horas válidas define o valor da hora.</p><p>Se você já tem celular para gravar, entra com o seu aparelho e começa numa faixa mais alta. Se não tiver, o celular vai por nossa conta.</p></div>
 </div>
+  <div class="tiers">
+    <div class="tier">
+      <div class="tag">Você usa o seu celular</div>
+      <h4>Freelancer</h4>
+      <div class="sub">Você grava com o seu próprio aparelho. A Clonex empresta o capacete e o adaptador.</div>
+      <div class="rows">
+        <div class="row"><span class="h">Até 29 horas no mês</span><span class="v">R$ 12/h</span></div>
+        <div class="row top"><span class="h">30 horas ou mais</span><span class="v">R$ 15/h</span></div>
+      </div>
+    </div>
+    <div class="tier">
+      <div class="tag">A Clonex manda o celular</div>
+      <h4>Fixo</h4>
+      <div class="sub">Kit completo por nossa conta: capacete, adaptador e celular.</div>
+      <div class="rows">
+        <div class="row"><span class="h">Até 49 horas no mês</span><span class="v">R$ 10/h</span></div>
+        <div class="row"><span class="h">De 50 a 70 horas</span><span class="v">R$ 12/h</span></div>
+        <div class="row top"><span class="h">Acima de 70 horas</span><span class="v">R$ 15/h</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="note" style="margin-top:12px">A faixa alcançada no fechamento do mês vale para todas as horas válidas daquele mês. Exemplo: 60 horas no modelo fixo são 60 &times; R$ 12, ou seja, R$ 720.</div>
+
   <div class="grid g3" style="margin-top:14px"><div class="card white"><div class="chip">&#8226;</div><h4>Primeiro pagamento em 10 horas</h4><p>Assim que você completar as 10 primeiras horas, o dinheiro cai. Antes mesmo de fechar o mês.</p></div><div class="card white"><div class="chip">&#8226;</div><h4>O restante no fechamento</h4><p>No fim do mês, com até 7 dias para conferir as horas gravadas e fechar o valor certo.</p></div><div class="card white"><div class="chip">&#8226;</div><h4>Pix, sem burocracia</h4><p>Pessoa física recebe direto no Pix, sem precisar de CNPJ. Quem tem empresa pode emitir nota.</p></div></div>
 </div></section>
 
 <section class="tight"><div class="wrap">
   <div class="sec-head"><div class="eyebrow">Sem complicação</div><h2>O que você não precisa ter</h2></div>
-  <div class="grid g4"><div class="card"><div class="chip">&#10003;</div><h4>Não precisa saber mexer em computador</h4><p>Você liga a câmera, trabalha e desliga. É isso.</p></div><div class="card"><div class="chip">&#10003;</div><h4>Não precisa mudar o seu trabalho</h4><p>Você faz exatamente o que já faria hoje, do mesmo jeito.</p></div><div class="card"><div class="chip">&#10003;</div><h4>Não precisa comprar nada</h4><p>O capacete, o adaptador e o celular são nossos e vão até você, sem custo.</p></div><div class="card"><div class="chip">&#10003;</div><h4>Não precisa ter empresa</h4><p>Pessoa física participa normalmente e recebe no Pix.</p></div></div>
+  <div class="grid g4"><div class="card"><div class="chip">&#10003;</div><h4>Não precisa saber mexer em computador</h4><p>Você liga a câmera, trabalha e desliga. É isso.</p></div><div class="card"><div class="chip">&#10003;</div><h4>Não precisa mudar o seu trabalho</h4><p>Você faz exatamente o que já faria hoje, do mesmo jeito.</p></div><div class="card"><div class="chip">&#10003;</div><h4>Não precisa comprar nada</h4><p>O capacete e o adaptador são nossos e vão até você, sem custo. O celular também, se você não tiver um.</p></div><div class="card"><div class="chip">&#10003;</div><h4>Não precisa ter empresa</h4><p>Pessoa física participa normalmente e recebe no Pix.</p></div></div>
 </div></section>
 
 <section class="tight"><div class="wrap">
-  <div class="sec-head"><div class="eyebrow">Sendo bem direto</div><h2>E se eu não fizer as 100 horas?</h2></div>
+  <div class="sec-head"><div class="eyebrow">Sendo bem direto</div><h2>E se eu gravar poucas horas no mês?</h2></div>
   <div class="grid g2">
-    <div class="card white"><div class="chip">&#8593;</div><h4>Você gravou direitinho, mas não bateu a meta</h4>
-      <p>Sem problema. A gente acompanha o seu ritmo. Se você usou o kit de forma constante e mesmo assim
-      fechou 60 horas, você recebe pelas 60 horas. Nada é descontado por não bater a meta.</p></div>
-    <div class="card white"><div class="chip">&#8595;</div><h4>Você quase não usou o kit</h4>
-      <p>A gente paga o que você produziu, do mesmo jeito. Mas aí o kit precisa ir para outra pessoa que consiga
-      usar mais, porque a quantidade de equipamento é limitada.</p></div>
+    <div class="card white"><div class="chip">&#8593;</div><h4>Você recebe por tudo que gravou</h4>
+      <p>Não existe meta obrigatória nem desconto. O que muda é o valor da hora: quanto mais horas válidas
+      você entrega no mês, mais alta a faixa. Fechou 60 horas com o celular da Clonex, recebe 60 &times; R$ 12.</p></div>
+    <div class="card white"><div class="chip">&#8595;</div><h4>Você quase não usou o equipamento</h4>
+      <p>A gente paga o que você produziu, do mesmo jeito. Mas aí o equipamento precisa ir para outra pessoa que consiga
+      usar mais, porque a quantidade é limitada.</p></div>
   </div>
-  <div class="note" style="margin-top:14px">Você pode parar quando quiser. A gente paga proporcionalmente ao que já foi gravado e recolhe o kit. Sem multa e sem pegadinha.</div>
+  <div class="note" style="margin-top:14px">Você pode parar quando quiser. A gente paga as horas já gravadas, na faixa correspondente, e recolhe o equipamento. Sem multa e sem pegadinha.</div>
 </div></section>
 
 <section id="como"><div class="wrap">
   <div class="sec-head"><div class="eyebrow">Passo a passo</div><h2>Como funciona, do começo ao pagamento</h2></div>
-  <div class="steps"><div class="step"><div class="n">1</div><h4>Você fala com o líder da sua região</h4><p>Uma conversa no WhatsApp para entender o seu trabalho e ver se encaixa no projeto.</p></div><div class="step"><div class="n">2</div><h4>A Clonex entrega o kit</h4><p>Capacete com suporte, adaptador e celular. Tudo por nossa conta, sem depósito e sem desconto.</p></div><div class="step"><div class="n">3</div><h4>Treinamento rápido e primeira gravação</h4><p>O líder mostra como ligar, como posicionar e o que pode e o que não pode. Depois acompanha a sua primeira gravação.</p></div><div class="step"><div class="n">4</div><h4>Você grava o seu dia normal</h4><p>Sem mudar o que você já faz. A câmera fica ligada durante a tarefa e você desliga quando terminar.</p></div><div class="step"><div class="n">5</div><h4>Envia, a gente confere e paga</h4><p>As primeiras 10 horas caem assim que você completar. O restante no fechamento do mês.</p></div></div>
+  <div class="steps"><div class="step"><div class="n">1</div><h4>Você fala com o líder da sua região</h4><p>Uma conversa no WhatsApp para entender o seu trabalho e ver se encaixa no projeto.</p></div><div class="step"><div class="n">2</div><h4>A Clonex entrega o equipamento</h4><p>Capacete com suporte e adaptador, por nossa conta, sem depósito e sem desconto. Se você não tiver celular para gravar, o aparelho também vai junto.</p></div><div class="step"><div class="n">3</div><h4>Treinamento rápido e primeira gravação</h4><p>O líder mostra como ligar, como posicionar e o que pode e o que não pode. Depois acompanha a sua primeira gravação.</p></div><div class="step"><div class="n">4</div><h4>Você grava o seu dia normal</h4><p>Sem mudar o que você já faz. A câmera fica ligada durante a tarefa e você desliga quando terminar.</p></div><div class="step"><div class="n">5</div><h4>Envia, a gente confere e paga</h4><p>As primeiras 10 horas caem assim que você completar. O restante no fechamento do mês.</p></div></div>
 </div></section>
 
 <section class="tight"><div class="wrap">
   <div class="sec-head"><div class="eyebrow">Equipamento</div><h2>O que vem no kit</h2></div>
-  <div class="grid g3"><div class="card"><div class="chip">&#9679;</div><h4>Capacete com suporte</h4><p>Leve, ajustável, para você trabalhar normalmente com as duas mãos livres.</p></div><div class="card"><div class="chip">&#9679;</div><h4>Adaptador de celular</h4><p>Prende o aparelho na posição certa, sempre no mesmo ângulo.</p></div><div class="card"><div class="chip">&#9679;</div><h4>Celular</h4><p>O aparelho vai junto no kit. Você não usa o seu.</p></div></div><div style="margin-top:14px" class="note">O kit é da Clonex. Fica emprestado durante o projeto e volta no encerramento. Você não paga nada, não deixa depósito e não tem desconto no pagamento. A internet só é usada na hora de enviar as gravações, não durante o trabalho.</div>
+  <div class="grid g3"><div class="card"><div class="chip">&#9679;</div><h4>Capacete com suporte</h4><p>Leve, ajustável, para você trabalhar normalmente com as duas mãos livres.</p></div><div class="card"><div class="chip">&#9679;</div><h4>Adaptador de celular</h4><p>Prende o aparelho na posição certa, sempre no mesmo ângulo.</p></div><div class="card"><div class="chip">&#9679;</div><h4>Celular</h4><p>Se você não tiver um aparelho para gravar, o celular vai junto por nossa conta. Se preferir usar o seu, a faixa de pagamento é mais alta.</p></div></div><div style="margin-top:14px" class="note">O kit é da Clonex. Fica emprestado durante o projeto e volta no encerramento. Você não paga nada, não deixa depósito e não tem desconto no pagamento. A internet só é usada na hora de enviar as gravações, não durante o trabalho.</div>
 </div></section>
 
 <section id="atividades"><div class="wrap">
@@ -558,7 +617,7 @@ footer{border-top:1px solid var(--line);padding:40px 0 54px;margin-top:20px}
 
 <section id="faq" class="tight"><div class="wrap">
   <div class="sec-head"><div class="eyebrow">Dúvidas</div><h2>Perguntas que todo mundo faz</h2></div>
-  <div class="faq"><details><summary>Preciso mesmo gravar 5 horas por dia, 20 dias por mês?</summary><p>Não. A meta é 100 horas gravadas no mês. As 5 horas por dia em 20 dias são só uma estimativa, para você ter uma ideia do tamanho. Pode gravar mais horas em menos dias ou menos horas em mais dias, do jeito que couber na sua rotina. O pagamento acompanha as horas produzidas: entregando mais que 100 horas, você recebe proporcionalmente pelas horas a mais.</p></details><details><summary>Preciso ter CNPJ?</summary><p>Não. Dá para participar como pessoa física, com pagamento no Pix. Se você tem CNPJ e prefere emitir nota, também funciona.</p></details><details><summary>Vou ter vínculo de emprego com a Clonex?</summary><p>Não. Não é contratação, não é CLT e não gera vínculo. É uma parceria de projeto, com contrato assinado dos dois lados.</p></details><details><summary>Quem paga o celular e a internet?</summary><p>O celular é da Clonex e vai junto no kit, sem custo para você. A internet você só usa na hora de enviar as gravações, não durante o trabalho.</p></details><details><summary>E se eu não conseguir fechar as 100 horas?</summary><p>A gente acompanha o seu ritmo. Se você gravou de forma constante e ainda assim não bateu a meta, recebe proporcionalmente às horas entregues, sem desconto nenhum. Se a produção ficar muito abaixo do combinado, pagamos o que foi produzido e o kit é remanejado para outra pessoa.</p></details><details><summary>Quando eu recebo?</summary><p>As primeiras 10 horas são pagas assim que você completar, para você ver que o pagamento é real. O restante entra no fechamento do mês, em até 7 dias para conferir as horas e fechar o valor.</p></details><details><summary>Meus clientes vão aparecer?</summary><p>A regra padrão é o cliente ficar fora da cena. Em serviços feitos na pessoa, como barbearia, salão ou petshop, quem é atendido assina a autorização antes. Sem assinatura, não grava.</p></details><details><summary>O equipamento fica comigo?</summary><p>Não. O kit é da Clonex, fica emprestado durante o projeto e volta no encerramento.</p></details><details><summary>Posso parar quando quiser?</summary><p>Pode. Pagamos proporcionalmente ao que já foi gravado e recolhemos o kit.</p></details><details><summary>Quanto tempo dura o projeto?</summary><p>O combinado é mês a mês. O primeiro mês é o piloto e, com bom resultado, já existe extensão prevista de 3 meses, com possibilidade de continuar depois disso.</p></details><details><summary>Quantas pessoas podem participar no mesmo local?</summary><p>Hoje o limite é de 10 kits por unidade. Conforme o resultado mensal, esse número pode subir.</p></details></div>
+  <div class="faq"><details><summary>Existe um número mínimo de horas por dia?</summary><p>Não. Você grava mais horas em menos dias ou menos horas em mais dias, do jeito que couber na sua rotina. O que conta é o total de horas válidas no fim do mês, porque é ele que define o valor da hora.</p></details><details><summary>Preciso ter CNPJ?</summary><p>Não. Dá para participar como pessoa física, com pagamento no Pix. Se você tem CNPJ e prefere emitir nota, também funciona.</p></details><details><summary>Vou ter vínculo de emprego com a Clonex?</summary><p>Não. Não é contratação, não é CLT e não gera vínculo. É uma parceria de projeto, com contrato assinado dos dois lados.</p></details><details><summary>Quem paga o celular e a internet?</summary><p>Se você não tiver um aparelho para gravar, o celular é da Clonex e vai junto, sem custo para você. Se preferir usar o seu, a faixa de pagamento é mais alta. A internet você só usa na hora de enviar as gravações, não durante o trabalho.</p></details><details><summary>Como é calculado o valor da hora?</summary><p>Pelo total de horas válidas que você entregar no mês, e a faixa alcançada vale para todas as horas daquele mês. Usando o seu próprio celular: até 29 horas, R$ 12 por hora; 30 horas ou mais, R$ 15 por hora. Com o celular da Clonex: até 49 horas, R$ 10 por hora; de 50 a 70 horas, R$ 12 por hora; acima de 70 horas, R$ 15 por hora. Não existe desconto nem multa por gravar pouco. Se a produção ficar muito abaixo do combinado, pagamos o que foi produzido e o equipamento é remanejado.</p></details><details><summary>Quando eu recebo?</summary><p>As primeiras 10 horas são pagas assim que você completar, para você ver que o pagamento é real. O restante entra no fechamento do mês, em até 7 dias para conferir as horas e fechar o valor.</p></details><details><summary>Meus clientes vão aparecer?</summary><p>A regra padrão é o cliente ficar fora da cena. Em serviços feitos na pessoa, como barbearia, salão ou petshop, quem é atendido assina a autorização antes. Sem assinatura, não grava.</p></details><details><summary>O equipamento fica comigo?</summary><p>Não. O capacete, o adaptador e, quando fornecido, o celular são da Clonex. Ficam emprestados durante o projeto e voltam no encerramento.</p></details><details><summary>Posso parar quando quiser?</summary><p>Pode. Pagamos as horas já gravadas, na faixa correspondente, e recolhemos o equipamento.</p></details><details><summary>Quanto tempo dura o projeto?</summary><p>O combinado é mês a mês. O primeiro mês é o piloto e, com bom resultado, já existe extensão prevista de 3 meses, com possibilidade de continuar depois disso.</p></details><details><summary>Quantas pessoas podem participar no mesmo local?</summary><p>Hoje o limite é de 10 participantes por unidade. Conforme o resultado mensal, esse número pode subir.</p></details></div>
 </div></section>
 
 <section class="tight"><div class="wrap">
@@ -573,8 +632,8 @@ footer{border-top:1px solid var(--line);padding:40px 0 54px;margin-top:20px}
   <div class="eyebrow">Para donos de pequenos negócios</div>
   <h1>Sua equipe já faz o trabalho. Isso pode virar receita.</h1>
   <p class="lead">Petshop, padaria, oficina, restaurante, mercearia, lavanderia, sítio, chácara.
-  Colocamos até 10 kits na mesma unidade, e cada kit rende R$ 1.500 a cada 100 horas.</p>
-  <div class="pills"><span class="pill accent"><span class="k"></span>Até 10 kits por unidade</span><span class="pill"><span class="k"></span>R$ 15.000 por mês no limite atual</span><span class="pill"><span class="k"></span>Não muda a operação</span><span class="pill"><span class="k"></span>Pessoa física ou CNPJ</span></div>
+  Colocamos até 10 participantes na mesma unidade, e cada um recebe até R$ 15 por hora gravada.</p>
+  <div class="pills"><span class="pill accent"><span class="k"></span>Até R$ 15 por hora, por participante</span><span class="pill"><span class="k"></span>Até 10 participantes por unidade</span><span class="pill"><span class="k"></span>Não muda a operação</span><span class="pill"><span class="k"></span>Pessoa física ou CNPJ</span></div>
   <div class="btn-row"><a class="btn" href="https://wa.me/5532999403399" target="_blank" rel="noopener">Falar no WhatsApp <span>&rarr;</span></a><a class="btn ghost" href="#como">Ver como funciona</a></div>
 </div></div></div>
 
@@ -600,25 +659,48 @@ footer{border-top:1px solid var(--line);padding:40px 0 54px;margin-top:20px}
 
 <section class="tight"><div class="wrap">
   <div class="money">
-  <div class="left"><div class="big">R$ 15.000</div><div class="lbl">por mês, no limite de 10 kits na mesma unidade</div></div>
-  <div class="side"><p>Cada kit vale R$ 1.500 por 100 horas gravadas no mês, ou R$ 15 por hora entregue.</p><p>A meta é por kit, e cada participante distribui as horas do jeito que couber na rotina dele.</p></div>
+  <div class="left"><div class="big">até R$ 15</div><div class="lbl">por hora gravada, por participante. Até 10 participantes na mesma unidade.</div></div>
+  <div class="side"><p>O valor da hora é definido por participante, pelo total de horas válidas que ele entregar no mês. Cada um distribui as horas na própria rotina, sem parar a operação.</p><p>Quem já tem celular para gravar usa o próprio aparelho e começa numa faixa mais alta. Para quem não tem, a Clonex fornece o celular junto com o resto do equipamento.</p></div>
 </div>
+  <div class="tiers">
+    <div class="tier">
+      <div class="tag">Você usa o seu celular</div>
+      <h4>Freelancer</h4>
+      <div class="sub">Você grava com o seu próprio aparelho. A Clonex empresta o capacete e o adaptador.</div>
+      <div class="rows">
+        <div class="row"><span class="h">Até 29 horas no mês</span><span class="v">R$ 12/h</span></div>
+        <div class="row top"><span class="h">30 horas ou mais</span><span class="v">R$ 15/h</span></div>
+      </div>
+    </div>
+    <div class="tier">
+      <div class="tag">A Clonex manda o celular</div>
+      <h4>Fixo</h4>
+      <div class="sub">Kit completo por nossa conta: capacete, adaptador e celular.</div>
+      <div class="rows">
+        <div class="row"><span class="h">Até 49 horas no mês</span><span class="v">R$ 10/h</span></div>
+        <div class="row"><span class="h">De 50 a 70 horas</span><span class="v">R$ 12/h</span></div>
+        <div class="row top"><span class="h">Acima de 70 horas</span><span class="v">R$ 15/h</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="note" style="margin-top:12px">A faixa alcançada no fechamento do mês vale para todas as horas válidas daquele mês. Exemplo: 60 horas no modelo fixo são 60 &times; R$ 12, ou seja, R$ 720.</div>
+
   <div class="grid g3" style="margin-top:14px"><div class="card white"><div class="chip">&#8226;</div><h4>Primeiro pagamento em 10 horas</h4><p>Assim que você completar as 10 primeiras horas, o dinheiro cai. Antes mesmo de fechar o mês.</p></div><div class="card white"><div class="chip">&#8226;</div><h4>O restante no fechamento</h4><p>No fim do mês, com até 7 dias para conferir as horas gravadas e fechar o valor certo.</p></div><div class="card white"><div class="chip">&#8226;</div><h4>Pix, sem burocracia</h4><p>Pessoa física recebe direto no Pix, sem precisar de CNPJ. Quem tem empresa pode emitir nota.</p></div></div>
 </div></section>
 
 <section class="tight"><div class="wrap">
   <div class="sec-head"><div class="eyebrow">Por que faz sentido</div><h2>O que o seu negócio ganha com isso</h2></div>
-  <div class="grid g3"><div class="card"><div class="chip">&#9679;</div><h4>Receita em cima do que já acontece</h4><p>Ninguém para de trabalhar para gravar. A tarefa é a mesma, só que registrada.</p></div><div class="card"><div class="chip">&#9679;</div><h4>Você escolhe quem grava</h4><p>Quem já faz a tarefa é quem participa. Nada de tirar gente de função.</p></div><div class="card"><div class="chip">&#9679;</div><h4>Treinamento no seu local</h4><p>O líder da região vai até você, entrega os kits e treina a equipe. Leva menos de uma hora.</p></div><div class="card"><div class="chip">&#9679;</div><h4>Zero custo de equipamento</h4><p>Capacete, adaptador e celular são da Clonex. Sem depósito, sem desconto.</p></div><div class="card"><div class="chip">&#9679;</div><h4>Sem criar vínculo novo</h4><p>Contrato de projeto, sem CLT e sem subordinação. Nada muda no seu quadro de funcionários.</p></div><div class="card"><div class="chip">&#9679;</div><h4>Começa pequeno</h4><p>Piloto de 1 mês. Dando resultado, já existe extensão prevista de 3 meses.</p></div></div>
+  <div class="grid g3"><div class="card"><div class="chip">&#9679;</div><h4>Receita em cima do que já acontece</h4><p>Ninguém para de trabalhar para gravar. A tarefa é a mesma, só que registrada.</p></div><div class="card"><div class="chip">&#9679;</div><h4>Você escolhe quem grava</h4><p>Quem já faz a tarefa é quem participa. Nada de tirar gente de função.</p></div><div class="card"><div class="chip">&#9679;</div><h4>Treinamento no seu local</h4><p>O líder da região vai até você, entrega os kits e treina a equipe. Leva menos de uma hora.</p></div><div class="card"><div class="chip">&#9679;</div><h4>Zero custo de equipamento</h4><p>Capacete e adaptador são da Clonex, e o celular também para quem não tiver. Sem depósito, sem desconto.</p></div><div class="card"><div class="chip">&#9679;</div><h4>Sem criar vínculo novo</h4><p>Contrato de projeto, sem CLT e sem subordinação. Nada muda no seu quadro de funcionários.</p></div><div class="card"><div class="chip">&#9679;</div><h4>Começa pequeno</h4><p>Piloto de 1 mês. Dando resultado, já existe extensão prevista de 3 meses.</p></div></div>
 </div></section>
 
 <section id="como"><div class="wrap">
   <div class="sec-head"><div class="eyebrow">Passo a passo</div><h2>Como funciona, do primeiro contato ao pagamento</h2></div>
-  <div class="steps"><div class="step"><div class="n">1</div><h4>Conversa com o líder da região</h4><p>Ele entende a sua operação e diz quantos kits fazem sentido no seu caso.</p></div><div class="step"><div class="n">2</div><h4>Definição do escopo</h4><p>A gente combina por escrito quais tarefas entram, quem participa e como é o pagamento.</p></div><div class="step"><div class="n">3</div><h4>Entrega dos kits e treinamento</h4><p>O líder vai até o seu local, entrega os equipamentos e treina a equipe.</p></div><div class="step"><div class="n">4</div><h4>A equipe grava a rotina</h4><p>A meta é 100 horas por kit no mês. Cada participante distribui essas horas na própria rotina, sem parar a produção.</p></div><div class="step"><div class="n">5</div><h4>Conferência e pagamento</h4><p>As primeiras 10 horas são pagas assim que cada participante completar. O restante no fechamento do mês.</p></div></div>
+  <div class="steps"><div class="step"><div class="n">1</div><h4>Conversa com o líder da região</h4><p>Ele entende a sua operação e diz quantos kits fazem sentido no seu caso.</p></div><div class="step"><div class="n">2</div><h4>Definição do escopo</h4><p>A gente combina por escrito quais tarefas entram, quem participa e como é o pagamento.</p></div><div class="step"><div class="n">3</div><h4>Entrega dos kits e treinamento</h4><p>O líder vai até o seu local, entrega os equipamentos e treina a equipe.</p></div><div class="step"><div class="n">4</div><h4>A equipe grava a rotina</h4><p>Cada participante distribui as horas na própria rotina, sem parar a produção. Quanto mais horas no mês, maior o valor da hora.</p></div><div class="step"><div class="n">5</div><h4>Conferência e pagamento</h4><p>As primeiras 10 horas são pagas assim que cada participante completar. O restante no fechamento do mês.</p></div></div>
 </div></section>
 
 <section class="tight"><div class="wrap">
   <div class="sec-head"><div class="eyebrow">Equipamento</div><h2>O que vem em cada kit</h2></div>
-  <div class="grid g3"><div class="card"><div class="chip">&#9679;</div><h4>Capacete com suporte</h4><p>Leve, ajustável, para você trabalhar normalmente com as duas mãos livres.</p></div><div class="card"><div class="chip">&#9679;</div><h4>Adaptador de celular</h4><p>Prende o aparelho na posição certa, sempre no mesmo ângulo.</p></div><div class="card"><div class="chip">&#9679;</div><h4>Celular</h4><p>O aparelho vai junto no kit. Você não usa o seu.</p></div></div><div style="margin-top:14px" class="note">O kit é da Clonex. Fica emprestado durante o projeto e volta no encerramento. Você não paga nada, não deixa depósito e não tem desconto no pagamento. A internet só é usada na hora de enviar as gravações, não durante o trabalho.</div>
+  <div class="grid g3"><div class="card"><div class="chip">&#9679;</div><h4>Capacete com suporte</h4><p>Leve, ajustável, para você trabalhar normalmente com as duas mãos livres.</p></div><div class="card"><div class="chip">&#9679;</div><h4>Adaptador de celular</h4><p>Prende o aparelho na posição certa, sempre no mesmo ângulo.</p></div><div class="card"><div class="chip">&#9679;</div><h4>Celular</h4><p>Se você não tiver um aparelho para gravar, o celular vai junto por nossa conta. Se preferir usar o seu, a faixa de pagamento é mais alta.</p></div></div><div style="margin-top:14px" class="note">O kit é da Clonex. Fica emprestado durante o projeto e volta no encerramento. Você não paga nada, não deixa depósito e não tem desconto no pagamento. A internet só é usada na hora de enviar as gravações, não durante o trabalho.</div>
 </div></section>
 
 <section id="atividades"><div class="wrap">
@@ -643,7 +725,7 @@ footer{border-top:1px solid var(--line);padding:40px 0 54px;margin-top:20px}
 
 <section id="faq" class="tight"><div class="wrap">
   <div class="sec-head"><div class="eyebrow">Dúvidas</div><h2>Perguntas de quem tem negócio</h2></div>
-  <div class="faq"><details><summary>Preciso mesmo gravar 5 horas por dia, 20 dias por mês?</summary><p>Não. A meta é 100 horas gravadas no mês. As 5 horas por dia em 20 dias são só uma estimativa, para você ter uma ideia do tamanho. Pode gravar mais horas em menos dias ou menos horas em mais dias, do jeito que couber na sua rotina. O pagamento acompanha as horas produzidas: entregando mais que 100 horas, você recebe proporcionalmente pelas horas a mais.</p></details><details><summary>Preciso ter CNPJ?</summary><p>Não. Dá para participar como pessoa física, com pagamento no Pix. Se você tem CNPJ e prefere emitir nota, também funciona.</p></details><details><summary>Vou ter vínculo de emprego com a Clonex?</summary><p>Não. Não é contratação, não é CLT e não gera vínculo. É uma parceria de projeto, com contrato assinado dos dois lados.</p></details><details><summary>Quem paga o celular e a internet?</summary><p>O celular é da Clonex e vai junto no kit, sem custo para você. A internet você só usa na hora de enviar as gravações, não durante o trabalho.</p></details><details><summary>E se eu não conseguir fechar as 100 horas?</summary><p>A gente acompanha o seu ritmo. Se você gravou de forma constante e ainda assim não bateu a meta, recebe proporcionalmente às horas entregues, sem desconto nenhum. Se a produção ficar muito abaixo do combinado, pagamos o que foi produzido e o kit é remanejado para outra pessoa.</p></details><details><summary>Quando eu recebo?</summary><p>As primeiras 10 horas são pagas assim que você completar, para você ver que o pagamento é real. O restante entra no fechamento do mês, em até 7 dias para conferir as horas e fechar o valor.</p></details><details><summary>Meus clientes vão aparecer?</summary><p>A regra padrão é o cliente ficar fora da cena. Em serviços feitos na pessoa, como barbearia, salão ou petshop, quem é atendido assina a autorização antes. Sem assinatura, não grava.</p></details><details><summary>O equipamento fica comigo?</summary><p>Não. O kit é da Clonex, fica emprestado durante o projeto e volta no encerramento.</p></details><details><summary>Posso parar quando quiser?</summary><p>Pode. Pagamos proporcionalmente ao que já foi gravado e recolhemos o kit.</p></details><details><summary>Quanto tempo dura o projeto?</summary><p>O combinado é mês a mês. O primeiro mês é o piloto e, com bom resultado, já existe extensão prevista de 3 meses, com possibilidade de continuar depois disso.</p></details><details><summary>Quantas pessoas podem participar no mesmo local?</summary><p>Hoje o limite é de 10 kits por unidade. Conforme o resultado mensal, esse número pode subir.</p></details><details><summary>Preciso tirar alguém da função para gravar?</summary><p>Não. A ideia é justamente o contrário: grava-se o trabalho que já seria feito. Se a pessoa precisa parar de produzir para gravar, o encaixe está errado.</p></details><details><summary>O pagamento cai para mim ou para o funcionário?</summary><p>Isso é combinado com você antes de começar. Pode ser pago à empresa, com nota, ou direto a cada participante no Pix. O que não muda é o valor por hora entregue.</p></details></div>
+  <div class="faq"><details><summary>Existe um número mínimo de horas por dia?</summary><p>Não. Você grava mais horas em menos dias ou menos horas em mais dias, do jeito que couber na sua rotina. O que conta é o total de horas válidas no fim do mês, porque é ele que define o valor da hora.</p></details><details><summary>Preciso ter CNPJ?</summary><p>Não. Dá para participar como pessoa física, com pagamento no Pix. Se você tem CNPJ e prefere emitir nota, também funciona.</p></details><details><summary>Vou ter vínculo de emprego com a Clonex?</summary><p>Não. Não é contratação, não é CLT e não gera vínculo. É uma parceria de projeto, com contrato assinado dos dois lados.</p></details><details><summary>Quem paga o celular e a internet?</summary><p>Se você não tiver um aparelho para gravar, o celular é da Clonex e vai junto, sem custo para você. Se preferir usar o seu, a faixa de pagamento é mais alta. A internet você só usa na hora de enviar as gravações, não durante o trabalho.</p></details><details><summary>Como é calculado o valor da hora?</summary><p>Pelo total de horas válidas que você entregar no mês, e a faixa alcançada vale para todas as horas daquele mês. Usando o seu próprio celular: até 29 horas, R$ 12 por hora; 30 horas ou mais, R$ 15 por hora. Com o celular da Clonex: até 49 horas, R$ 10 por hora; de 50 a 70 horas, R$ 12 por hora; acima de 70 horas, R$ 15 por hora. Não existe desconto nem multa por gravar pouco. Se a produção ficar muito abaixo do combinado, pagamos o que foi produzido e o equipamento é remanejado.</p></details><details><summary>Quando eu recebo?</summary><p>As primeiras 10 horas são pagas assim que você completar, para você ver que o pagamento é real. O restante entra no fechamento do mês, em até 7 dias para conferir as horas e fechar o valor.</p></details><details><summary>Meus clientes vão aparecer?</summary><p>A regra padrão é o cliente ficar fora da cena. Em serviços feitos na pessoa, como barbearia, salão ou petshop, quem é atendido assina a autorização antes. Sem assinatura, não grava.</p></details><details><summary>O equipamento fica comigo?</summary><p>Não. O capacete, o adaptador e, quando fornecido, o celular são da Clonex. Ficam emprestados durante o projeto e voltam no encerramento.</p></details><details><summary>Posso parar quando quiser?</summary><p>Pode. Pagamos as horas já gravadas, na faixa correspondente, e recolhemos o equipamento.</p></details><details><summary>Quanto tempo dura o projeto?</summary><p>O combinado é mês a mês. O primeiro mês é o piloto e, com bom resultado, já existe extensão prevista de 3 meses, com possibilidade de continuar depois disso.</p></details><details><summary>Quantas pessoas podem participar no mesmo local?</summary><p>Hoje o limite é de 10 participantes por unidade. Conforme o resultado mensal, esse número pode subir.</p></details><details><summary>Preciso tirar alguém da função para gravar?</summary><p>Não. A ideia é justamente o contrário: grava-se o trabalho que já seria feito. Se a pessoa precisa parar de produzir para gravar, o encaixe está errado.</p></details><details><summary>O pagamento cai para mim ou para o funcionário?</summary><p>Isso é combinado com você antes de começar. Pode ser pago à empresa, com nota, ou direto a cada participante no Pix. O que não muda é o valor por hora entregue.</p></details></div>
 </div></section>
 
 <section class="tight"><div class="wrap">
@@ -692,15 +774,38 @@ footer{border-top:1px solid var(--line);padding:40px 0 54px;margin-top:20px}
 
 <section class="tight"><div class="wrap">
   <div class="money">
-  <div class="left"><div class="big">R$ 15.000</div><div class="lbl">por mês, no limite de 10 kits por unidade</div></div>
-  <div class="side"><p>Cada kit vale R$ 1.500 a cada 100 horas gravadas no mês, ou R$ 15 por hora entregue.</p><p>Conforme o resultado mensal, o limite de kits por unidade pode ser ampliado.</p></div>
+  <div class="left"><div class="big">até R$ 15</div><div class="lbl">por hora de gravação válida, por participante. Até 10 participantes por unidade.</div></div>
+  <div class="side"><p>O valor da hora é apurado por participante, conforme o total de horas válidas entregues no mês, e a faixa alcançada vale para todas as horas daquele mês.</p><p>Conforme o resultado mensal, o limite de participantes por unidade pode ser ampliado.</p></div>
 </div>
+  <div class="tiers">
+    <div class="tier">
+      <div class="tag">Você usa o seu celular</div>
+      <h4>Freelancer</h4>
+      <div class="sub">Você grava com o seu próprio aparelho. A Clonex empresta o capacete e o adaptador.</div>
+      <div class="rows">
+        <div class="row"><span class="h">Até 29 horas no mês</span><span class="v">R$ 12/h</span></div>
+        <div class="row top"><span class="h">30 horas ou mais</span><span class="v">R$ 15/h</span></div>
+      </div>
+    </div>
+    <div class="tier">
+      <div class="tag">A Clonex manda o celular</div>
+      <h4>Fixo</h4>
+      <div class="sub">Kit completo por nossa conta: capacete, adaptador e celular.</div>
+      <div class="rows">
+        <div class="row"><span class="h">Até 49 horas no mês</span><span class="v">R$ 10/h</span></div>
+        <div class="row"><span class="h">De 50 a 70 horas</span><span class="v">R$ 12/h</span></div>
+        <div class="row top"><span class="h">Acima de 70 horas</span><span class="v">R$ 15/h</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="note" style="margin-top:12px">A faixa alcançada no fechamento do mês vale para todas as horas válidas daquele mês. Exemplo: 60 horas no modelo fixo são 60 &times; R$ 12, ou seja, R$ 720.</div>
+
   <div class="grid g3" style="margin-top:14px"><div class="card white"><div class="chip">&#8226;</div><h4>Primeiro pagamento em 10 horas</h4><p>Assim que você completar as 10 primeiras horas, o dinheiro cai. Antes mesmo de fechar o mês.</p></div><div class="card white"><div class="chip">&#8226;</div><h4>O restante no fechamento</h4><p>No fim do mês, com até 7 dias para conferir as horas gravadas e fechar o valor certo.</p></div><div class="card white"><div class="chip">&#8226;</div><h4>Pix, sem burocracia</h4><p>Pessoa física recebe direto no Pix, sem precisar de CNPJ. Quem tem empresa pode emitir nota.</p></div></div>
 </div></section>
 
 <section id="como"><div class="wrap">
   <div class="sec-head"><div class="eyebrow">Modelo</div><h2>Como o piloto é conduzido</h2></div>
-  <div class="steps"><div class="step"><div class="n">1</div><h4>Reunião de escopo</h4><p>Mapeamos quais postos e tarefas fazem sentido, quais áreas ficam de fora e quantos kits cabem.</p></div><div class="step"><div class="n">2</div><h4>Documentação</h4><p>Contrato de projeto, termo de consentimento e lista de escopo enviados para o seu jurídico.</p></div><div class="step"><div class="n">3</div><h4>Entrega e treinamento</h4><p>Kits entregues com registro de inventário. Treinamento presencial com os participantes.</p></div><div class="step"><div class="n">4</div><h4>Operação normal, gravada</h4><p>100 horas por kit no mês, dentro do escopo acordado, distribuídas na rotina normal. Sem parada de produção.</p></div><div class="step"><div class="n">5</div><h4>Conferência e fechamento</h4><p>Validação das horas gravadas e pagamento ao final do mês.</p></div></div>
+  <div class="steps"><div class="step"><div class="n">1</div><h4>Reunião de escopo</h4><p>Mapeamos quais postos e tarefas fazem sentido, quais áreas ficam de fora e quantos kits cabem.</p></div><div class="step"><div class="n">2</div><h4>Documentação</h4><p>Contrato de projeto, termo de consentimento e lista de escopo enviados para o seu jurídico.</p></div><div class="step"><div class="n">3</div><h4>Entrega e treinamento</h4><p>Kits entregues com registro de inventário. Treinamento presencial com os participantes.</p></div><div class="step"><div class="n">4</div><h4>Operação normal, gravada</h4><p>As horas são distribuídas na rotina normal, dentro do escopo acordado. Sem parada de produção.</p></div><div class="step"><div class="n">5</div><h4>Conferência e fechamento</h4><p>Validação das horas gravadas e pagamento ao final do mês.</p></div></div>
 </div></section>
 
 <section class="tight"><div class="wrap">
@@ -708,13 +813,13 @@ footer{border-top:1px solid var(--line);padding:40px 0 54px;margin-top:20px}
   <div class="grid g3">
     <div class="stat"><div class="n">1 mês</div><div class="l">piloto inicial, mês a mês, sem fidelidade</div></div>
     <div class="stat"><div class="n">+3 meses</div><div class="l">extensão já prevista, mediante bom resultado</div></div>
-    <div class="stat"><div class="n">10 kits</div><div class="l">limite atual por unidade, com possibilidade de ampliação</div></div>
+    <div class="stat"><div class="n">10</div><div class="l">participantes por unidade no limite atual, com possibilidade de ampliação</div></div>
   </div>
 </div></section>
 
 <section class="tight"><div class="wrap">
   <div class="sec-head"><div class="eyebrow">Equipamento</div><h2>O que compõe cada kit</h2></div>
-  <div class="grid g3"><div class="card"><div class="chip">&#9679;</div><h4>Capacete com suporte</h4><p>Leve, ajustável, para você trabalhar normalmente com as duas mãos livres.</p></div><div class="card"><div class="chip">&#9679;</div><h4>Adaptador de celular</h4><p>Prende o aparelho na posição certa, sempre no mesmo ângulo.</p></div><div class="card"><div class="chip">&#9679;</div><h4>Celular</h4><p>O aparelho vai junto no kit. Você não usa o seu.</p></div></div><div style="margin-top:14px" class="note">O kit é da Clonex. Fica emprestado durante o projeto e volta no encerramento. Você não paga nada, não deixa depósito e não tem desconto no pagamento. A internet só é usada na hora de enviar as gravações, não durante o trabalho.</div>
+  <div class="grid g3"><div class="card"><div class="chip">&#9679;</div><h4>Capacete com suporte</h4><p>Leve, ajustável, para você trabalhar normalmente com as duas mãos livres.</p></div><div class="card"><div class="chip">&#9679;</div><h4>Adaptador de celular</h4><p>Prende o aparelho na posição certa, sempre no mesmo ângulo.</p></div><div class="card"><div class="chip">&#9679;</div><h4>Celular</h4><p>Se você não tiver um aparelho para gravar, o celular vai junto por nossa conta. Se preferir usar o seu, a faixa de pagamento é mais alta.</p></div></div><div style="margin-top:14px" class="note">O kit é da Clonex. Fica emprestado durante o projeto e volta no encerramento. Você não paga nada, não deixa depósito e não tem desconto no pagamento. A internet só é usada na hora de enviar as gravações, não durante o trabalho.</div>
 </div></section>
 
 <section id="atividades"><div class="wrap">
@@ -739,7 +844,7 @@ footer{border-top:1px solid var(--line);padding:40px 0 54px;margin-top:20px}
 
 <section id="faq" class="tight"><div class="wrap">
   <div class="sec-head"><div class="eyebrow">Dúvidas</div><h2>Perguntas de quem toca uma operação</h2></div>
-  <div class="faq"><details><summary>Preciso mesmo gravar 5 horas por dia, 20 dias por mês?</summary><p>Não. A meta é 100 horas gravadas no mês. As 5 horas por dia em 20 dias são só uma estimativa, para você ter uma ideia do tamanho. Pode gravar mais horas em menos dias ou menos horas em mais dias, do jeito que couber na sua rotina. O pagamento acompanha as horas produzidas: entregando mais que 100 horas, você recebe proporcionalmente pelas horas a mais.</p></details><details><summary>Vou ter vínculo de emprego com a Clonex?</summary><p>Não. Não é contratação, não é CLT e não gera vínculo. É uma parceria de projeto, com contrato assinado dos dois lados.</p></details><details><summary>Quem paga o celular e a internet?</summary><p>O celular é da Clonex e vai junto no kit, sem custo para você. A internet você só usa na hora de enviar as gravações, não durante o trabalho.</p></details><details><summary>E se eu não conseguir fechar as 100 horas?</summary><p>A gente acompanha o seu ritmo. Se você gravou de forma constante e ainda assim não bateu a meta, recebe proporcionalmente às horas entregues, sem desconto nenhum. Se a produção ficar muito abaixo do combinado, pagamos o que foi produzido e o kit é remanejado para outra pessoa.</p></details><details><summary>Quando eu recebo?</summary><p>As primeiras 10 horas são pagas assim que você completar, para você ver que o pagamento é real. O restante entra no fechamento do mês, em até 7 dias para conferir as horas e fechar o valor.</p></details><details><summary>O equipamento fica comigo?</summary><p>Não. O kit é da Clonex, fica emprestado durante o projeto e volta no encerramento.</p></details><details><summary>Posso parar quando quiser?</summary><p>Pode. Pagamos proporcionalmente ao que já foi gravado e recolhemos o kit.</p></details><details><summary>Quanto tempo dura o projeto?</summary><p>O combinado é mês a mês. O primeiro mês é o piloto e, com bom resultado, já existe extensão prevista de 3 meses, com possibilidade de continuar depois disso.</p></details><details><summary>Quantas pessoas podem participar no mesmo local?</summary><p>Hoje o limite é de 10 kits por unidade. Conforme o resultado mensal, esse número pode subir.</p></details><details><summary>Isso pode gerar passivo trabalhista?</summary><p>O modelo é de contrato de projeto, sem subordinação, sem jornada imposta e sem exclusividade. Todos os documentos, incluindo contrato e termos de consentimento, são apresentados na íntegra antes de qualquer gravação, para análise do seu jurídico.</p></details><details><summary>Como fica a confidencialidade do processo produtivo?</summary><p>Áreas sensíveis podem ficar fora do escopo desde o início, por escrito. O que não estiver no escopo acordado não é gravado.</p></details><details><summary>Quem responde pelo equipamento dentro da planta?</summary><p>Os kits são da Clonex, entregues com registro de inventário e recolhidos no encerramento do projeto.</p></details></div>
+  <div class="faq"><details><summary>Existe um número mínimo de horas por dia?</summary><p>Não. Você grava mais horas em menos dias ou menos horas em mais dias, do jeito que couber na sua rotina. O que conta é o total de horas válidas no fim do mês, porque é ele que define o valor da hora.</p></details><details><summary>Vou ter vínculo de emprego com a Clonex?</summary><p>Não. Não é contratação, não é CLT e não gera vínculo. É uma parceria de projeto, com contrato assinado dos dois lados.</p></details><details><summary>Quem paga o celular e a internet?</summary><p>Se você não tiver um aparelho para gravar, o celular é da Clonex e vai junto, sem custo para você. Se preferir usar o seu, a faixa de pagamento é mais alta. A internet você só usa na hora de enviar as gravações, não durante o trabalho.</p></details><details><summary>Como é calculado o valor da hora?</summary><p>Pelo total de horas válidas que você entregar no mês, e a faixa alcançada vale para todas as horas daquele mês. Usando o seu próprio celular: até 29 horas, R$ 12 por hora; 30 horas ou mais, R$ 15 por hora. Com o celular da Clonex: até 49 horas, R$ 10 por hora; de 50 a 70 horas, R$ 12 por hora; acima de 70 horas, R$ 15 por hora. Não existe desconto nem multa por gravar pouco. Se a produção ficar muito abaixo do combinado, pagamos o que foi produzido e o equipamento é remanejado.</p></details><details><summary>Quando eu recebo?</summary><p>As primeiras 10 horas são pagas assim que você completar, para você ver que o pagamento é real. O restante entra no fechamento do mês, em até 7 dias para conferir as horas e fechar o valor.</p></details><details><summary>O equipamento fica comigo?</summary><p>Não. O capacete, o adaptador e, quando fornecido, o celular são da Clonex. Ficam emprestados durante o projeto e voltam no encerramento.</p></details><details><summary>Posso parar quando quiser?</summary><p>Pode. Pagamos as horas já gravadas, na faixa correspondente, e recolhemos o equipamento.</p></details><details><summary>Quanto tempo dura o projeto?</summary><p>O combinado é mês a mês. O primeiro mês é o piloto e, com bom resultado, já existe extensão prevista de 3 meses, com possibilidade de continuar depois disso.</p></details><details><summary>Quantas pessoas podem participar no mesmo local?</summary><p>Hoje o limite é de 10 participantes por unidade. Conforme o resultado mensal, esse número pode subir.</p></details><details><summary>Isso pode gerar passivo trabalhista?</summary><p>O modelo é de contrato de projeto, sem subordinação, sem jornada imposta e sem exclusividade. Todos os documentos, incluindo contrato e termos de consentimento, são apresentados na íntegra antes de qualquer gravação, para análise do seu jurídico.</p></details><details><summary>Como fica a confidencialidade do processo produtivo?</summary><p>Áreas sensíveis podem ficar fora do escopo desde o início, por escrito. O que não estiver no escopo acordado não é gravado.</p></details><details><summary>Quem responde pelo equipamento dentro da planta?</summary><p>Os kits são da Clonex, entregues com registro de inventário e recolhidos no encerramento do projeto.</p></details></div>
 </div></section>
 
 <section class="tight"><div class="wrap">
